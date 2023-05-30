@@ -1,0 +1,29 @@
+$font-size:3rem;
+$secondary-color:#fff; 
+
+body{ 
+    // font-size:$font-size;
+    background-color:$secondary-color;
+    
+}
+input, select{ 
+    border:none;
+}
+
+.container{ 
+    margin:0 auto; 
+    width:90%;
+}
+
+@mixin pOfSpeech{ 
+    font-size:1.4rem; 
+    font-weight:500;
+    font-family:'mada', sans-serif; 
+}
+
+@mixin pOfSpeechBar{ 
+    width:85%;
+    height:0; 
+    border-top:1px solid gray; 
+    align-self:center;
+}

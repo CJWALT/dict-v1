@@ -1,0 +1,75 @@
+.meaning-wrap{ 
+    scrollbar-width: thin;
+    height:45vh;
+    overflow:hidden;
+    overflow-y: scroll;
+    scrollbar-width: 20px;
+    scroll-behavior: smooth;
+    .meaning-wrap-heading{ 
+        display:flex; 
+        flex-direction: rows;
+        gap:1.2rem;
+        margin-bottom:2rem;
+        small.partSpeech{
+            @include pOfSpeech;
+        }
+        hr.partSpeechBar{ 
+            @include pOfSpeechBar
+        }
+        
+    }
+    .mean-wrap{  
+         margin-bottom:1rem;
+        h5.mean-heading{ 
+            font-size: 1.2rem;
+            font-family:'mada', sans-serif;
+            color:gray;
+            font-weight:400;
+            margin-bottom:.7rem;
+        }
+    
+        ul.mean-list{ 
+            padding:0 1.2rem;
+            .mean-listing{ 
+                font-size:.9rem; 
+                color:#000; 
+                line-height:1.2rem; 
+                font-family:'montserrat', sans-serif; 
+                font-weight:500; 
+                letter-spacing:.1rem;
+                margin-bottom:1.2rem;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+
+        }
+            .mean-syn{ 
+                display:flex; 
+                flex-direction: row;
+                gap:1.6rem;
+                font-weight:600;
+            .syn-word{ 
+                font-size:1.1rem; 
+                color:blue; 
+            }
+        }
+        .partSpeechTwo{ 
+            @include pOfSpeech;
+        }
+        .partSpeechTwoBar{ 
+            @include pOfSpeechBar;
+        }
+    }
+    &::-webkit-scrollbar{ 
+        width:.2rem;
+        border-radius:.4rem;
+    }
+    &::-webkit-scrollbar-track{ 
+        background:lightgray;
+    }
+    &::-webkit-scrollbar-thumb{ 
+        background:rgb(183, 180, 180);
+        // width:.1rem;
+    }
+}
