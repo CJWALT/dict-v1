@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react'   
 import { MdOutlineToggleOff, MdOutlineDarkMode } from 'react-icons/md'
 import {BiBookAlt} from 'react-icons/bi'
-export default function Header() {
+export default function Header(props){
+
+    // console.log(props.fontType)
   return (
     <>
     <header>
@@ -14,9 +16,10 @@ export default function Header() {
                 <div className="header-opt-wrap">
                     <div className="font-opt">
                         
-                        <select name="font-option" id="" className="font-select">
-                            <option>serif</option>    
-                            <option>Times New Roman</option>    
+                        <select name="font-option" value={props.fontValue} onChange={props.fontType} className="font-select">
+                            <option value="mada">mada</option>    
+                            <option value="sans-serif">serif</option>    
+                            <option value="Times New Roman">Times New Roman</option>    
                         </select>
                     </div>
                     <div className="drk-mode_icon">
